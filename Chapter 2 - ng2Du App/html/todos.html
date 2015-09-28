@@ -25,32 +25,30 @@
       <hr>
     </div>
   </div>
-<div ng-controller="TodoController">
+  <!-- Let's add a controller -->
+<div>
   <div class="container">
     <div class="row">
       <!-- Let's add some todos -->
       <div class="form-group">
         <label>Title:</label>
-        <input type="text" id="title" name="title" class="form-control" ng-model="title">
+        <!-- We need to bind the the $scope with ng-model -->
+        <input type="text" id="title" name="title" class="form-control" >
       </div>
       <div class="form-group">
         <label>Description:</label>
-        <input type="text" id="description" name="description" class="form-control" ng-model="description">
+        <!-- We need to bind description to the $scope with ng-model -->
+        <input type="text" id="description" name="description" class="form-control" >
       </div>
-      <button class="btn btn-default" ng-click="addTodo()">Add Todo</button>
+      <!-- We need to bind a click function using ng-click -->
+      <button class="btn btn-default">Add Todo</button>
     </div>
   </div>
   <hr>
   <div class="container">
     <h2>Things to do...</h2>
     <!-- We are going to add some code here that allows us to generate the DOM -->
-    <ul>
-      <li ng-repeat="todo in todos">
-        <h4>{{ todo.title }}</h4>
-        <p>{{ todo.description }}</p>
-        <button class="btn btn-danger" ng-click="removeTodo(todos.indexOf(todo))">Delete</button>
-      </li>
-    </ul>
+    
   </div>
 </div>
 

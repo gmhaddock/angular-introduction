@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngHello">
+<!-- We need to establish our application using a custom AngularJS directive "ng-app" this can be used anywhere.
+  However, we are going to put it on the html tag since this entire page is going to be our application.
+ -->
+<head>
+  <meta charset="UTF-8">
+  <title>ngHello</title>
+  <!-- Let's add the angularJS reference -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <!-- Let's add some bootstrap styling -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+</head>
+<body>
+  <header class = "jumbotron container">
+    <h1>Welcome to AngularJS!</h1>
+    <h3>What is AngularJS?</h3>
+    <p>
+      That is a great question. This is a tool that was originally developed by Google to address
+      some of the shortcomings of building projects with standard HTML/CSS/JavaScript. If you remember,
+      manipulating the DOM with jQuery, though easier than standard JavaScript, was still difficult. Dynamically
+      adding elements and manipulating those elements based on user interactions was a giant pain. There are several
+      frameworks that were devised to lessen these struggles. Some of the frameworks are as follows:
+      <ul>
+        <li>Backbone.js</li>
+        <li>Ember.js</li>
+        <li>AngularJS</li>
+      </ul>
+      Angular was devised as a way to be data driven and address some of the issues that you will have
+      when trying to grab user interaction data and use it to complete some task. Moreover, it allows
+      you to modularize the functionality of your web application so that you can reuse code as well as
+      fine tune different parts of the application.
+    </p>
+    <h3>Why are we using AngularJS?</h3>
+    <p>We have chosen to use AngularJS as our front-end framework because...</p>
+    <ul>
+      <li>Angular has a small learning curve to get started...
+        <ul>
+          <li>
+            <strong>Careful:</strong>Angular is expansive and will take some time to learn
+            the advance features.
+            </li>
+        </ul>
+      </li>
+      <li>Angular is a Model-View-Controller(MVC) framework. This is a design pattern
+          that requires you to separate all of your data from the view with a "middle man" called the
+          controller that provides the connection and logic for rendering views from the data.
+      </li>
+      <li>There are a great deal of resources for Angular. (Some are better than others.)</li>
+      <li>Pretty much if you can dream it, then you can do it in Angular.</li>
+      <li>There are a great many other reasons to use Angular, but I think we shouldn't overwhelm
+        ourselves with jargon!
+      </li>
+    </ul>
+
+  </header>
+  <!-- This is the main content div. Everything that we do will be in this div. -->
+  <section id="content" class="container" ng-controller="IntroductionController">
+    <!-- We need to add a controller to the section so we can "control" how things work
+    This is a strong simplification of what is going on, but we will use that definition for now.
+   -->
+    <header>
+      <!-- Do not get too excited. This is just a gentle introduction to the setup
+      of an application. By keeping things simple then we can more easily troubleshoot. -->
+      <h1>Our first AngularJS application!</h1>
+    </header>
+    <div>
+      <!-- This is a simple input box. We will use it to see some interesting things such as
+      two-way data binding, and use of scope.
+     -->
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" class="form-control" ng-model="name">
+      </div>
+
+
+      <div id="output">
+        <h3>Hello {{ name }}!</h3>
+        <p>I hope that you like Angular!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- We do not have to add jQuery because we now have access to all of those features using Angular and some
+  community plugins. I know, I know... "Why did you show us jQuery?" Well... I will get to that.
+ -->
+  <script>
+  // Let's start our introduction to AngularJS
+
+  // We need to create our
+  var app = angular.module("ngHello",[]);
+  //Let's create something called a "controller" that will manage the main part of our app.
+  app.controller("IntroductionController",function($scope){
+    $scope.name = ""; //This is the $scope of the IntroductionController that allows us attach data
+                      //to our controller for manipulation and usage.
+  });
+  </script>
+</body>
+</html>

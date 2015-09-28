@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- (1) Do not forget to initialize your application with the ng-app directive. Your app is called
+    ngFirst
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Time for you to try!</title>
+  <!-- We need to bring in the AngularJS library. -->
+
+  <!-- Let's bring in bootstrap for some stylish pages. -->
+
+</head>
+<body>
+  <div class="container">
+    <header class="jumbotron">
+      <h1>Your assignment:</h1>
+      <ol>
+        <li>Initialize this app with the <code>ng-app</code> directive. Call the application: "ngFirst"</li>
+        <li>Using a CDN, add a script tag with the source to AngularJS. <strong>Not 2.0</strong></li>
+        <li>Using a CDN, a  link tag with a reference to Bootstrap.</li>
+        <li> In the content area, add three inputs that users will use to interact with your application.
+            <ul>
+              <li>Name</li>
+              <li>Favorite Color</li>
+              <li>Email Address</li>
+            </ul>
+            Use the comments in this HTML file to guide your development.
+        </li>
+        <li>In the output portion, have the output look something like the following:
+          <p>Hello <em>[name]</em> at <em>[emailAddress]!</em> <br>
+            I hear your favorite color is <em>[favoriteColor]</em>
+          </p>
+          <p>
+            The italics are not necessary in your output, I used them to <em>emphasize</em>
+            the dynamic parts of the output.
+          </p>
+        </li>
+        <li>Since this only needs a single controller, then add the conroller <code>AssignmentController</code>
+            to the body of this application.
+        </li>
+        <li>Inside the controller, you want to create three variables are that are attached
+          to the <code>$scope</code> of <code>AssignmentController</code> so that you can use them.
+          <ul>
+            <li>This is technically not necessary for this simple app. However, this becomes a common
+                usage so we might as well get started.
+            </li>
+          </ul>
+        </li>
+        <li><strong>CHALLENGE:</strong> Using the ng-click directive (you may have to look it up), have
+            an alert pop up when you click a button called "Woot!". <strong>You must use the Angular way.</strong>
+            <ul>
+              <li>I would add the button using HTML</li>
+              <li>You will need to attach a function to the scope of the controller to accomplish this.
+                  Call the function <code>sayWoot()</code>.
+              </li>
+              <li><em>If you do not get this finish, that is okay. If you do, then great.</em></li>
+            </ul>
+        </li>
+
+
+      </ol>
+    </header>
+    <hr>
+    <h2>Your assignment area is below:</h2>
+    <div id="content">
+      <!--
+        Do not put any of these inputs in a form. We are not using them to interact with a server.
+        Moreover, you should use appropriate input types that will provide some validation. We will do some additional
+        validation in the future but use what you have for now.
+
+        CAUTION: Do not forget the ng-model directive that
+    -->
+      <!-- Add an input field, with some bootstrap styling that is looking for a person's name. Do not forget the
+      label. -->
+
+      <!-- Add an input field with some bootstrap styling that is looking for a person's favorite color. Do not forget
+      the label.
+     -->
+
+     <!-- Add an input field with some bootstrap styling that is looking for a person's email address. -->
+    </div>
+  </div>
+
+
+<!-- We have no need for jQuery or boostrap.js -->
+<!-- We are going to use internal scripts for now, just to get things up and running. -->
+<script>
+  // Let's create our angular application called ngFirst using the "module" function from Angular. Assign that application
+  // to the variable app.
+
+  //Let's attach a controller called AssignmentController to the app. Refresh to make sure that you haven't broken anything.
+  //Make sure that you are passing the $scope object to the controller funciton.
+      //Inside the controller, attach the following variable to the scope with empty values.
+      // 1. name
+      // 2. emailAddress
+      // 3. favoriteColor
+      // Notice the format of those names.
+
+</script>
+</body>
+</html>

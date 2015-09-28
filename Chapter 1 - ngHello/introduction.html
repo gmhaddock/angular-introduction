@@ -7,9 +7,9 @@
   <meta charset="UTF-8">
   <title>ngHello</title>
   <!-- Let's add the angularJS reference -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
   <!-- Let's add some bootstrap styling -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 
 </head>
@@ -57,7 +57,7 @@
 
   </header>
   <!-- This is the main content div. Everything that we do will be in this div. -->
-  <section id="content" class="container" ng-controller="IntroductionController">
+  <section id="content" class="container" >
     <!-- We need to add a controller to the section so we can "control" how things work
     This is a strong simplification of what is going on, but we will use that definition for now.
    -->
@@ -72,12 +72,12 @@
      -->
       <div class="form-group">
         <label>Name:</label>
-        <input type="text" class="form-control" ng-model="name">
+        <input type="text" class="form-control">
       </div>
 
 
       <div id="output">
-        <h3>Hello {{ name }}!</h3>
+        <h3>Hello !</h3>
         <p>I hope that you like Angular!</p>
       </div>
     </div>
@@ -90,12 +90,9 @@
   // Let's start our introduction to AngularJS
 
   // We need to create our
-  var app = angular.module("ngHello",[]);
+
   //Let's create something called a "controller" that will manage the main part of our app.
-  app.controller("IntroductionController",function($scope){
-    $scope.name = ""; //This is the $scope of the IntroductionController that allows us attach data
-                      //to our controller for manipulation and usage.
-  });
+  
   </script>
 </body>
 </html>
